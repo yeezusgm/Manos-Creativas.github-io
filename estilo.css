@@ -1,0 +1,97 @@
+body{background-color: #ebebad;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #403c34;
+}
+
+#header{
+    background-image:url('bg5.gif');
+    background-position-x: center;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #c6baa4;
+    font-size: 3em;
+    padding: 40px;
+    margin: 0px;
+    text-align: center;
+}
+
+#header>p{
+    text-align: center;
+    color: #fff;
+    font-size: 0.7em;
+    text-shadow: 0px 0px 4px #222;
+}
+
+h2{font-style: oblique;
+    font-size: 2 em;
+    background: yellow;
+}
+
+#bienvenida{font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #fff;
+}
+
+#menu ul{background-color: #58d3f7;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#menu li{
+    float: left;
+}
+
+#menu li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px; 
+}
+
+.marca{
+    font-style: italic;
+    font-weight: bold;
+    font-family: Georgia, Times, serif;
+}
+
+#contenido{
+    margin: 100px;
+    margin-top: 30px;
+    background-color: #f2f0eb;
+    padding: 50px;
+}
+
+#menu li a:hover {
+    background-color: #357a8f;
+}
+
+#contenido img{
+    max-width: 100%;
+}
+
+a:link{
+    text-decoration: none;
+    color: #ff7e00;
+    font-weight: bold;
+}
+
+a:active{
+    color: #d53c0d;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: #a7723e;
+}
+
+
+a:hover{
+    text-decoration: underline;
+    color: red;
+}
