@@ -1,0 +1,23 @@
+#overlay.marsh-console .panel{width:min(600px,100%);max-height:calc(100dvh - 32px);overflow:auto;padding:clamp(14px,3vw,28px);border-color:#9f9166;background:radial-gradient(ellipse at 50% 18%,#303834 0,#201d27 55%,#14111d 100%);box-shadow:inset 0 0 0 4px #1c1c22,inset 0 0 0 5px #776a524a,0 16px 48px #0e0916a0}
+#overlay.marsh-console h2{font-size:clamp(27px,4vw,44px);color:#f3e5c1}
+.marsh-console .eyebrow,.marsh-console .ornament{color:#d2c396}
+.marsh-console .ornament{margin:5px auto}
+.marsh-console p{font-size:clamp(13px,2.2vh,16px);line-height:1.4;margin:8px auto;color:#e4dce1}
+.marsh-diagram{margin:10px auto;padding:12px 8px;background:#151b20;border:1px solid #74795e8a;border-radius:4px}
+.vat-row,.bells-row,.cord-list,.machine-ops,.machine-tools{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px}
+.vat-col{display:grid;justify-items:center;gap:4px;width:28%;min-width:55px;color:#d3cbb4}
+.vat-col span,.vat-col strong{font-size:14px}
+.vat-col.here,.cord-list .here{color:#ffe3a5}
+.vessel{height:47px;width:45px;border:2px solid #91977f;border-radius:4px 4px 12px 12px;position:relative;overflow:hidden;background:repeating-linear-gradient(0deg,transparent 0 8px,#b7bca11d 8px 9px)}
+.vessel.v1{width:37px;height:39px;margin-top:8px}.vessel.v2{width:30px;height:31px;margin-top:16px}
+.vessel b{display:block;position:absolute;bottom:0;left:0;right:0;background:linear-gradient(#cde9b2,#678b77);transition:height .22s}
+.bells-row{flex-wrap:nowrap;gap:clamp(4px,1.45vw,10px);margin:5px 0}.bells-row>strong{font-size:13px;color:#d8cfb4;width:52px;text-align:right}
+.bells-row span{display:grid;min-width:32px;color:#c3bcbe;font-size:12px;justify-items:center}.bells-row b{font-size:17px;line-height:1.1}
+.bells-row .ringing{color:#efcc84}.bells-row.wish{opacity:.83}
+.cord-list{font-size:12px;color:#c4bebb;gap:3px 14px;padding-top:6px}.cord-list b{color:#ece1ca;font-size:12px}
+.root-board{display:block;width:100%;height:clamp(90px,18vh,143px)}.pipe path{fill:none;stroke:#6d6d70;stroke-width:4;stroke-linecap:square}.pipe circle{fill:#25232a;stroke:#a39b8f;stroke-width:1.5}.pipe text{fill:#f1e9dc;font:700 11px system-ui;text-anchor:middle}.pipe.wet path,.pipe.wet circle{stroke:#bbdf9b}.pipe.wet circle{fill:#425241}.pipe.blight circle{fill:#6c3854;stroke:#c28caa}.pipe.here circle{stroke:#ffdc87;stroke-width:3}.pipe-key,.machine-summary{font-size:12px!important;margin:1px!important;color:#e3d4b0!important}
+.machine-ops button,.machine-tools button,.marsh-console .actions button{min-height:40px}.machine-ops button{color:#fbf1ce;background:#3f4536;border-color:#838b62}.machine-tools{margin-top:8px}.machine-tools button{font-size:13px;background:transparent;border-color:#6b636c;padding:5px 10px}.machine-hint,.machine-feedback,.reset-confirm{font-size:14px;color:#f0d59a!important}.machine-tools .machine-hint{width:100%}
+.marsh-map{text-align:left;border-left:2px solid #9c9f76;padding:5px 12px;background:#222427;margin:12px 0}.marsh-map h3{margin:0;color:#e4d5ae}.marsh-map p,.marsh-map details{margin:5px 0;font-size:13px}.marsh-map summary{cursor:pointer;color:#e8dfbf}.marsh-map svg{width:100%;border:1px solid #666850;background:#151920}.marsh-map .mapped-ledge{stroke:#c2c1a5;stroke-width:2.25}.marsh-map .pass{stroke:#93c79b;stroke-width:2;stroke-dasharray:3 3}.marsh-map .bar{stroke:#d79a91;stroke-width:3}.marsh-map text{fill:#d9db98;font-size:12px}.marsh-map .here-pin{stroke:#201322;fill:#ffd9a3}
+#overlay.wide .panel{max-height:calc(100dvh - 32px);overflow:auto}
+@media(max-height:520px){#overlay.marsh-console{padding:5px}#overlay.marsh-console .panel{max-height:calc(100dvh - 10px);padding:10px 15px}.marsh-console .ornament{display:none}.marsh-diagram{padding:4px;margin:6px auto}.root-board{height:72px}.machine-tools,.marsh-console .actions{margin-top:4px}}
+@media(prefers-reduced-motion:reduce){.vessel b{transition:none}}

@@ -1,0 +1,26 @@
+ABYSS BLADE · EL UMBRAL
+Para GitHub Pages, extrae el ZIP en la carpeta que publiques; index.html y las carpetas art, assets y vendor deben quedar juntos. No hay compilación.
+El ensayo del menú no escribe sobre las cuatro ranuras de historia. Usa Espacio para saltar, J para atacar, W o flecha arriba + J para el corte ascendente y K para esquivar. En móvil, joystick arriba + ataque.
+I abre Inventario, Amuletos y Misiones; L abre directamente el diario. Q y R cambian de pestaña. C muestra u oculta las completadas, que puedes releer. M abre el atlas; F en el atlas abre la lista de faros. Cambiar de selección no inicia el viaje. Para recoger los objetos de los encargos interactúa con el faro de destino.
+El Observatorio del Eclipse está en el propio camino, al fondo del Archivo del Ocaso. Cruzar el primer pilar sella ambas salidas y los faros. Si caes, puedes reintentar en la entrada.
+Esquiva las marcas de la lluvia y salta la onda del báculo. Cuando el pecho del mago brille dorado, salta y haz un corte ascendente. Tras absorber tres cargas, provoca un cuarto aturdimiento y acércate para dar el golpe final. La victoria abre las puertas y, en la historia, la quinta ranura de amuleto.
+
+Los seis enemigos del camino tienen hojas de reposo y ataque propias. El Vigía y el Ascua blanden espadas; el Ánima vuela, el Orante dispara cuentas de su rosario, el Cieno salta y el Bastión combate con escudo. Nara espera en el Santuario y en el Cruce: usa E o el botón de interacción para verla hablar con Tom.
+
+El Vigía, el Ascua y el Bastión caminan al patrullar y aceleran sus pasos al perseguir a Tom. Puedes continuar tu partida guardada. El video extras/caminatas.mp4 muestra sus tres caminatas en las Cisternas del Velo.
+
+Tras derrotar al Mago Oscuro en la historia, cruza a pie la reja oriental del Observatorio. Si terminaste la versión anterior, elige Continuar con esa ranura: Tom te espera junto al antiguo altar y la reja ya está abierta.
+El Marjal de la Peste atraviesa cuatro barrios. Los faros marcan el regreso; busca las palancas al otro lado de los dos rastrillos para abrir atajos. Los bordes claros señalan dónde aterrizar.
+Acércate a una inscripción o pieza y pulsa E (o Interactuar en la pantalla). Los vasos, el carillón y los injertos conservan su estado al salir. Puedes pedir una pista y reiniciar solo el mecanismo que estés usando. Con M se abre el mapa; allí también se guardan las inscripciones que hayas leído.
+
+Menús: WASD o flechas eligen, J / E / Enter confirman y K / Esc regresan. Z / X o RePág / AvPág cambian de página. Tab y Mayús+Tab recorren todos los controles. En el inventario, J usa el objeto o equipa el amuleto seleccionado. En pantalla táctil usa los botones de página y de acción.
+
+
+La Forja de la Raíz está a la derecha del faro del Umbral de la Raíz. Pulsa E junto al yunque para templar la espada. Los siguientes rangos cuestan 3, 6 y 8 cristales. Para el III hace falta un sello del cruce; para el IV, derrotar al Mago Oscuro. Si ya encendiste el faro, elige Cristales en el inventario para localizarlo. Los enemigos comunes dan entre 3 y 6 Nux; busca cristales en los desvíos. La manzana del Santuario cuesta 4 Nux.
+
+Cada tarjeta de perfil muestra lo que guarda esa partida, incluido el último refugio. A/D o las flechas eligen perfil; J o Enter abre la partida. Las ranuras anteriores siguen disponibles y una tarjeta vacía permite empezar otra aventura sin sobrescribirlas.
+
+El bosque, las grutas y el Marjal tienen paralaje al caminar y saltar. En Opciones > Paralaje del escenario elige Auto, Normal, Suave o Fijo. Puedes cambiarlo durante la partida con el teclado o al tocar la pantalla. Auto respeta el movimiento reducido del sistema o del juego. Si eliges Normal o Suave, el paisaje se mueve incluso con las sacudidas y destellos reducidos. Fijo inmoviliza el paisaje. La preferencia se guarda aparte de los perfiles. En extras/paralaje.mp4 puedes comparar Fijo y Normal durante el mismo recorrido de Tom.
+
+Fondos nuevos (art/fondos): bosque, abismo (eclipse) y Marjal de la Peste salen de los PSD Bosque_2_0, Abismo y Zona_de_peste_2_0. Cada escena tiene tres planos (lejos, medio y cerca) que se mueven a distinta velocidad con el paralaje de Opciones. Las cuevas conservan su arte anterior.
+Las nubes del abismo y del Marjal son capas propias que derivan solas (también con Tom quieto). Con el paralaje en Fijo, o con movimiento reducido en Auto, se quedan quietas.

@@ -1,0 +1,154 @@
+.codex-travel {
+  --far-paper: #eee0da;
+  --far-stroke: #a18ba2;
+  --far-gold: #f0cb9e;
+  --far-muted: #ae9eb1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: clamp(5px, 1.4vh, 16px);
+  text-align: left;
+}
+.far-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(12px, 2.9vw, 43px);
+  min-height: 0;
+  min-width: 0;
+}
+.far-figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-items: center;
+  align-self: stretch;
+  align-content: center;
+  min-height: 0;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(0px, .5vh, 6px) 0;
+}
+.far-art { display: block; align-self: center; width: 100%; height: 100%; min-height: 0; max-height: 420px; }
+.far-contours { stroke: #84697f; opacity: .29; }
+.far-geology { color: #9b8999; opacity: .48; }
+.far-meridian { stroke: #967d95; opacity: .65; stroke-width: 1; }
+.far-rose { stroke: #bb9b9e; stroke-width: .9; fill: none; }
+.far-rose-petal { fill: #966f87; }
+.far-rose text { font: 8px Georgia, serif; fill: #caacaf; stroke: none; text-anchor: middle; }
+.far-route { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.far-route .route-rim { stroke: #504354; stroke-width: 5.2; }
+.far-route .route-marrow { stroke: #958196; stroke-width: 1; stroke-dasharray: 2 4; }
+.far-route.awake .route-rim { stroke: #866985; }
+.far-route.awake .route-marrow { stroke: #e1bcd3; stroke-width: 1.3; stroke-dasharray: none; }
+.far-node-ring { fill: #19131e; stroke: #a392a5; stroke-width: 1.5; }
+.far-node.asleep .far-node-ring { stroke-dasharray: 4 2.5; }
+.far-node.awake .far-node-ring { fill: #493248; stroke: #ead0df; stroke-width: 2; }
+.far-dash { fill: none; stroke: #c6b4c9; stroke-width: 1.2; }
+.far-core { fill: #fae8ef; }
+.far-map-no { font: 8px ui-monospace, monospace; fill: #b3a0b7; }
+.far-node.awake .far-map-no { fill: #eedce8; }
+.far-node.chosen .far-map-no { fill: #fce3bf; font-weight: bold; }
+.far-cursor { fill: #f5d3a2; stroke: #f5d3a2; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.far-aureole { stroke: #edc58f; stroke-width: 1; fill: #d0a291; fill-opacity: .12; }
+.far-lamp > path { fill: #f6d7a7; stroke: #382536; stroke-width: 1.55; stroke-linejoin: round; }
+.far-lamp > .far-flame { fill: #743e51; stroke: none; }
+.far-chart-key { display: flex; gap: clamp(10px, 2vw, 23px); justify-content: center; align-items: center; font: 500 .72rem/1.2 system-ui, sans-serif; color: var(--far-muted); }
+.far-chart-key span { display: inline-flex; align-items: center; gap: 6px; }
+.far-chart-key i, .far-status i { display: inline-block; box-sizing: border-box; width: .72em; height: .72em; flex: none; }
+.far-chart-key .far-key-tom, .far-stop.local .far-status i {
+  width: .78em; height: 1.05em; border: 0; border-radius: 0; background: var(--far-gold);
+  clip-path: polygon(50% 0, 73% 27%, 96% 39%, 93% 73%, 70% 74%, 50% 100%, 30% 74%, 7% 73%, 4% 39%, 27% 27%);
+}
+.far-chart-key .far-key-dest { transform: rotate(45deg); border: 1px solid var(--far-gold); background: #997a7d66; }
+.far-chart-key .far-key-sleep, .far-stop.asleep .far-status i { border: 1px dashed #aa9caf; border-radius: 50%; }
+.far-destinations {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-self: center;
+  width: 100%; max-height: 100%; min-height: 0; min-width: 0;
+  padding: 0 clamp(1px, .8vw, 12px);
+  box-sizing: border-box;
+}
+.far-list-head {
+  display: flex; justify-content: space-between; align-items: center; gap: 5px;
+  margin: 0 0 clamp(3px, 1.2vh, 14px); padding: 0 1px clamp(3px, .75vh, 8px);
+  border-bottom: 1px solid #88718666;
+}
+.far-list-head h3 { margin: 0; padding: 0; color: var(--far-paper); font: normal clamp(1.15rem, 2.45vw, 1.75rem)/1.2 Georgia, serif; }
+.far-list-head > span { display: flex; align-items: center; gap: 4px; white-space: nowrap; color: var(--far-muted); font: 500 clamp(.64rem, .95vw, .76rem)/1.1 system-ui, sans-serif; }
+.far-list-head svg { display: block; flex: none; }
+.far-list { display: flex; flex-direction: column; justify-content: center; min-width: 0; min-height: 0; gap: clamp(1px, .45vh, 5px); }
+.far-list .far-stop {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(18px, 2vw, 26px) minmax(0, 1fr) auto;
+  align-items: center; gap: clamp(4px, .8vw, 9px);
+  width: 100%; min-width: 0; min-height: 0;
+  padding: clamp(3px, .65vh, 8px) clamp(7px, 1.05vw, 15px);
+  color: var(--far-paper);
+  border: 1px solid transparent; border-radius: 1px; background: transparent;
+  line-height: 1.18; text-align: left;
+}
+.far-stop .far-number { color: #b89aad; font: 500 clamp(.65rem, .9vw, .75rem)/1 ui-monospace, monospace; letter-spacing: .02em; }
+.far-stop-name { font: normal clamp(.9rem, 1.6vw, 1.23rem)/1.12 Georgia, serif; overflow-wrap: anywhere; }
+.far-status { display: inline-flex; align-items: center; justify-content: end; gap: 4px; font: 500 .7rem/1 system-ui, sans-serif; color: var(--far-gold); }
+.far-stop.awake:not(.local) .far-status i { width: .67em; height: .67em; border-radius: 50%; border: 1px solid #e4d1e6; background: #c3a5cc; }
+.far-list .far-stop.asleep:not([aria-pressed=true]) { color: #b4a9bb; }
+.far-list .far-stop.asleep:not([aria-pressed=true]) .far-number { color: #9f8da2; }
+.far-list .far-stop:hover { background: #5e465a46; border-color: #73617587; outline: 0; }
+.far-list .far-stop[aria-pressed=true] {
+  color: #fff4e6; border-color: transparent; border-block-color: #ae8ba343;
+  background: linear-gradient(90deg, transparent, #926d8173 24%, #7651685e 78%, transparent);
+}
+.far-stop[aria-pressed=true]::before, .far-stop[aria-pressed=true]::after {
+  content: ''; position: absolute; top: 50%; width: 5px; height: 5px; border: 1px solid var(--far-gold); transform: translateY(-50%) rotate(45deg); background: #412f40;
+}
+.far-stop[aria-pressed=true]::before { left: -3px; }
+.far-stop[aria-pressed=true]::after { right: -3px; }
+.far-pager { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: clamp(5px, 1.25vh, 13px); color: var(--far-muted); font: 500 .72rem/1.2 system-ui, sans-serif; }
+.far-pager b { color: var(--far-paper); font-weight: 600; font-variant-numeric: tabular-nums; }
+.far-pager button { display: grid; place-items: center; padding: 0; min-width: 35px; height: 26px; background: transparent; border: 1px solid #806a8363; border-radius: 2px; color: var(--far-paper); font: normal 1.16rem/.8 Georgia, serif; }
+.far-pager button:disabled { opacity: .35; }
+.far-bottom { display: flex; min-width: 0; justify-content: space-between; align-items: center; gap: clamp(5px, 2vw, 20px); padding: clamp(5px, 1vh, 12px) 0 0; border-top: 1px solid #866b804d; }
+.codex-travel p.far-note { margin: 0; min-width: 0; max-width: none; color: #c6b9c9; text-align: left; font: normal clamp(.76rem, 1.1vw, .92rem)/1.3 Georgia, serif; }
+.far-actions { display: flex; flex: none; align-items: center; gap: 5px; }
+.far-actions button { min-width: 0; padding: clamp(4px, .7vh, 8px) clamp(6px, 1.15vw, 15px); font: 600 clamp(.69rem, 1vw, .81rem)/1.2 system-ui, sans-serif; }
+.far-actions button:disabled { opacity: .56; }
+.far-list .far-stop:focus-visible, .far-actions button:focus-visible, .far-pager button:focus-visible { outline: 2px solid #f0d7b7; outline-offset: 1px; }
+@media (max-width: 650px) and (min-height: 470px) {
+  .codex-travel { gap: 6px; }
+  .far-body { grid-template-columns: 1fr; grid-template-rows: minmax(62px, 1fr) auto; align-items: stretch; gap: 8px; }
+  .far-figure { min-height: 0; padding: 0; }
+  .far-art { width: 100%; max-height: min(22vh, 185px); }
+  .far-chart-key { gap: 14px; font-size: .65rem; }
+  .far-destinations { padding-inline: 3px; align-self: end; }
+  .far-list-head { padding-bottom: 3px; margin-bottom: 3px; }
+  .far-list { gap: 2px; }
+  .far-list .far-stop { padding: 5px 9px; }
+  .far-pager { margin-top: 4px; }
+  .far-bottom { flex-wrap: wrap; justify-content: center; gap: 4px 10px; }
+  .codex-travel p.far-note { flex: 1 1 100%; text-align: center; }
+  .far-actions button { padding: 6px 13px; }
+}
+@media (max-height: 469px) {
+  .codex-travel { gap: 3px; }
+  .far-body { gap: clamp(8px, 1.8vw, 18px); grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .far-figure { padding: 0; }
+  .far-chart-key { font-size: .62rem; gap: 10px; }
+  .far-destinations { padding-inline: 3px; }
+  .far-list-head { padding-bottom: 2px; margin-bottom: 2px; }
+  .far-list-head h3 { font-size: 1.08rem; }
+  .far-list-head > span { font-size: .62rem; }
+  .far-list-head svg { width: 13px; height: 13px; }
+  .far-list { gap: 1px; }
+  .far-list .far-stop { grid-template-columns: 17px minmax(0, 1fr) auto; padding: 3px 6px; }
+  .far-stop-name { font-size: .91rem; }
+  .far-pager { margin-top: 3px; font-size: .64rem; }
+  .far-pager button { height: 22px; min-width: 29px; }
+  .far-bottom { padding-top: 4px; }
+  .far-actions button { padding: 4px 9px; }
+}
+.far-smith-mark{display:inline-block;vertical-align:middle;width:1.05em;height:1.05em;margin-left:.35em;fill:#e9b985}

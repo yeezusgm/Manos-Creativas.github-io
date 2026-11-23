@@ -1,0 +1,31 @@
+{
+  "frameWidth": 448,
+  "frameHeight": 384,
+  "columns": 4,
+  "pivot": {
+    "x": 224,
+    "y": 348
+  },
+  "sheets": {
+    "rain": {
+      "file": "rain.webp",
+      "frames": 12,
+      "rows": 3
+    },
+    "staff": {
+      "file": "staff.webp",
+      "frames": 12,
+      "rows": 3
+    },
+    "idle": {
+      "file": "idle.webp",
+      "frames": 6,
+      "rows": 2
+    },
+    "stun": {
+      "file": "stun.webp",
+      "frames": 5,
+      "rows": 2
+    }
+  }
+}

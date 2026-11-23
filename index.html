@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#120e1c"><title>Abyss Blade · El umbral</title>
+<meta name="description" content="Acompaña a Tom desde el bosque hasta el Marjal de la Peste. Salta entre ruinas, descifra sus mecanismos y enfréntate al Mago Oscuro en Abyss Blade.">
+<link rel="stylesheet" href="./style.css?v=fondos5"><link rel="stylesheet" href="./peste.css"><link rel="stylesheet" href="./codice-marco.css"><link rel="stylesheet" href="./codice-misiones.css"><link rel="stylesheet" href="./carta-faros.css"><link rel="stylesheet" href="./atlas-paginas.css"><link rel="stylesheet" href="./perfiles.css"><link rel="stylesheet" href="./forja.css"></head>
+<body><main id="stage">
+ <div id="view"></div><div id="cave-veil" aria-hidden="true" hidden></div><div class="lens"></div>
+ <div id="hud" hidden>
+   <div class="vitals"><div id="energy" class="energy" role="meter" aria-label="Energía del Abismo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span aria-hidden="true">◇</span></div><div><div class="label">TOM · VIAJERO</div><div id="life"></div><div id="stock"></div></div></div>
+   <div class="chapter"><span>ABYSS BLADE</span><b id="zone">Bosque de la Vigilia</b></div>
+   <nav aria-label="Menús del juego"><button id="map" aria-label="Mapa (M)" title="Mapa (M)"><i aria-hidden="true">⌖</i><span>Mapa</span></button><button id="inv" aria-label="Inventario, amuletos y misiones (I)" title="Códice (I) · Misiones (L)"><i aria-hidden="true">◇</i><span>Inventario</span></button><button id="pause" aria-label="Pausa (Esc)" title="Pausa (Esc)"><i aria-hidden="true">Ⅱ</i><span>Pausa</span></button></nav>
+ </div>
+ <div id="hint" hidden></div><div id="touch-hint" hidden><span></span></div><div id="toast" role="status"></div>
+ <div id="mage-hud" hidden></div><div id="touch" hidden><div id="joystick" role="group" aria-label="Joystick de movimiento"><span class="stick-base" aria-hidden="true"><span class="stick-knob"></span></span></div><div class="touch-actions"><button data-act="interact" aria-label="Interactuar">E</button><button data-act="dash" aria-label="Esquivar">↝</button><button data-act="jump" aria-label="Saltar">↑</button><button data-act="attack" aria-label="Atacar">⚔</button></div></div>
+ <section id="overlay" aria-label="Menú del juego"></section>
+ <section id="cinematic" aria-label="Cinemática de la espada" hidden><div class="cine-top"></div><div class="cine-bottom"><span id="cine-caption">Santuario del Eco</span><button id="skip">Saltar escena · J</button></div></section>
+ <div id="flash"></div>
+</main><script type="importmap">{"imports":{"./paralaje.js":"./paralaje.js?v=fondos5","./world.js":"./world.js?v=fondos5","./peste-art.js":"./peste-art.js?v=fondos5"}}</script><script type="module" src="./main.js?v=fondos5"></script></body></html>

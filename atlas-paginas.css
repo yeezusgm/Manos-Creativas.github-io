@@ -1,0 +1,111 @@
+/* The atlas shares the journal's frame. Its body is a leaf, never a
+   scroll container: sections and page turns are real keyboard buttons. */
+.codex-atlas {
+  --atlas-gold:#edcea2; --atlas-ink:#f3e9e4; --atlas-muted:#bfb2bf;
+  --atlas-rule:#a5818f59; --atlas-field:#1d14203b;
+  display:flex; flex-direction:column; flex:1 1 auto; width:100%; min-width:0; min-height:0;
+  text-align:left; color:var(--atlas-ink); gap:clamp(6px,1.2dvh,14px);
+}
+.codex-atlas :is(nav,ul,figure) {margin:0; padding:0}
+.codex-atlas .atlas-top,.codex-atlas .atlas-links,.codex-atlas .atlas-chapter,
+.codex-atlas .atlas-turns,.codex-atlas .atlas-links>div {display:flex; align-items:center}
+.codex-atlas .atlas-top,.codex-atlas .atlas-links,.codex-atlas .atlas-chapter {justify-content:space-between; gap:8px}
+.codex-atlas .atlas-top {border-bottom:1px solid var(--atlas-rule); flex:none; padding-bottom:4px}
+.codex-atlas .atlas-top nav {display:flex; justify-content:start; align-items:stretch; gap:3px; min-width:0}
+.codex-atlas .atlas-icon {display:block; width:19px; height:19px; flex:none}
+.codex-atlas button {font:500 13px/1.12 system-ui,sans-serif; letter-spacing:.01em; color:var(--atlas-ink); border-radius:2px; touch-action:manipulation}
+.codex-atlas .atlas-section {display:inline-flex; align-items:center; justify-content:center; gap:5px; padding:7px 9px; border:1px solid transparent; background:transparent; color:var(--atlas-muted)}
+.codex-atlas .atlas-section[aria-pressed=true] {color:var(--atlas-gold); background:linear-gradient(0deg,#aa839425,transparent 95%); border-bottom-color:var(--atlas-gold)}
+.codex-atlas button:enabled:hover {background-color:#6c496740}
+.codex-atlas button:focus-visible {outline:2px solid #f4dbb5; outline-offset:1px; box-shadow:0 0 8px #dbbe923b}
+.codex-atlas button:disabled {opacity:.47}
+.codex-atlas .atlas-turns {gap:5px; flex:none}
+.codex-atlas .atlas-turn {display:grid; place-items:center; min-width:30px; min-height:29px; padding:0; font:24px/.85 Georgia,serif; background:transparent; border-color:var(--atlas-rule)}
+.codex-atlas .atlas-turns>span {color:var(--atlas-muted); font:600 10px/1 system-ui,sans-serif; font-variant-numeric:tabular-nums; white-space:nowrap}
+.codex-atlas .atlas-folio {flex:1 1 0%; display:flex; flex-direction:column; justify-content:center; min-width:0; min-height:0; gap:clamp(5px,1.1dvh,13px)}
+.codex-atlas .atlas-chapter {flex:none; text-align:left}
+.codex-atlas .atlas-chapter small,.codex-atlas figcaption {display:block; color:var(--atlas-gold); text-transform:uppercase; letter-spacing:.14em; font:600 10px/1.25 system-ui,sans-serif}
+.codex-atlas .atlas-chapter h3 {margin:2px 0 0; color:var(--atlas-ink); font:normal clamp(22px,3.7vmin,36px)/1.08 Georgia,serif; letter-spacing:-.023em}
+.codex-atlas .atlas-tally,.codex-atlas .atlas-badge {flex:none; white-space:nowrap; color:var(--atlas-muted); font:500 12px/1.2 system-ui,sans-serif}
+.codex-atlas .atlas-tally b,.codex-atlas .atlas-counter b {color:var(--atlas-gold); font-variant-numeric:tabular-nums; font-weight:650}
+.codex-atlas .atlas-badge {border:1px solid var(--atlas-rule); padding:4px 8px; border-radius:12px}
+.codex-atlas .atlas-badge.present {color:#d6dfb2; border-color:#93a67c78}
+.codex-atlas .atlas-drawing {display:block; min-width:0; width:100%; background:radial-gradient(ellipse at 48% 66%,#54324b35,transparent 70%),#110e17; border:1px solid var(--atlas-rule); padding:0; margin:0}
+.codex-atlas .atlas-drawing svg {width:100%; height:auto; display:block; border:0; border-radius:0; min-height:0; background:transparent; max-height:min(23dvh,210px)}
+.codex-atlas .atlas-drawing .known path:not(.corridor) {fill:#654560; stroke:#e2bfd1}
+.codex-atlas .atlas-drawing .unknown path {fill:#29202f; stroke:#89788b}
+.codex-atlas .atlas-drawing .corridor {stroke:#987f96}
+.codex-atlas .atlas-drawing .beacon-dot {fill:#edcc90; stroke:#29202f}
+.codex-atlas .atlas-drawing .tom-marker {fill:#fff2cf; stroke:#d68fbc; stroke-width:2.5}
+.codex-atlas .atlas-drawing .atlas-halves {display:none}
+.codex-atlas .atlas-key,.codex-atlas .atlas-counter {display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:5px 12px}
+.codex-atlas .atlas-key {font:500 12px/1.2 system-ui,sans-serif; color:var(--atlas-muted)}
+.codex-atlas .atlas-key>span {display:inline-flex; align-items:center; gap:5px}
+.codex-atlas .atlas-key i {display:inline-block; width:7px; height:7px}
+.codex-atlas .atlas-tom {background:#fff2cf; transform:rotate(45deg); border:1px solid #d68fbc}
+.codex-atlas .atlas-lit {background:#edcc90; border-radius:50%}
+.codex-atlas .atlas-key .atlas-seal {width:3px; height:10px; background:#eda0a6}
+.codex-atlas .atlas-counter {max-width:none; margin:0; color:var(--atlas-muted); font:500 12px/1.22 system-ui,sans-serif; gap:4px 7px}
+.codex-atlas .atlas-counter>span {color:#9e7f92; margin:0 4px}
+.codex-atlas .atlas-sectors,.codex-atlas .atlas-place-list {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); list-style:none}
+.codex-atlas .atlas-sectors {gap:4px 12px}
+.codex-atlas .atlas-sectors li {font:500 13px/1.2 system-ui,sans-serif; color:#e4d4dc}
+.codex-atlas .atlas-sectors li>span,.codex-atlas .atlas-location-index {color:var(--atlas-gold); font:600 10px/1 system-ui,sans-serif; letter-spacing:.08em}
+.codex-atlas .atlas-sectors li>span {margin-right:6px}
+.codex-atlas .atlas-sectors .veiled,.codex-atlas .atlas-sectors .veiled>span {color:#a196a5}
+.codex-atlas .atlas-sectors .present::after {content:' ◆'; color:var(--atlas-gold); font-size:.7em}
+.codex-atlas .atlas-place-list {gap:6px 14px}
+.codex-atlas .atlas-place-list li {display:flex; align-items:center; gap:10px; padding:8px 7px; border-block-start:1px solid var(--atlas-rule); min-width:0}
+.codex-atlas .atlas-place-list li.present {background:linear-gradient(90deg,#7b566329,transparent)}
+.codex-atlas .atlas-place-list strong {display:block; font:normal clamp(16px,2.3vmin,23px)/1.16 Georgia,serif; color:var(--atlas-ink)}
+.codex-atlas .atlas-place-list small {display:block; margin-top:2px; color:var(--atlas-muted); font:500 12px/1.25 system-ui,sans-serif}
+.codex-atlas .atlas-note,.codex-atlas .atlas-unmapped {display:flex; align-items:center; justify-content:center; gap:clamp(10px,2vw,25px); background:linear-gradient(100deg,#72556f1f,transparent); border-inline-start:2px solid var(--atlas-rule); padding:clamp(8px,2dvh,23px) clamp(9px,2vw,26px)}
+.codex-atlas .atlas-note .atlas-icon,.codex-atlas .atlas-unmapped .atlas-icon {width:32px; height:32px; color:var(--atlas-gold)}
+.codex-atlas .atlas-note p,.codex-atlas .atlas-unmapped p {max-width:64ch; margin:0; color:var(--atlas-ink); text-align:left; font:normal clamp(16px,2.6vmin,23px)/1.35 Georgia,serif}
+.codex-atlas .atlas-note p+p {margin-top:.45em; color:#d0bfd1}
+.codex-atlas .atlas-links {flex:none; border-top:1px solid var(--atlas-rule); padding-top:5px; justify-content:flex-end}
+.codex-atlas .atlas-links>small {margin-right:auto; color:var(--atlas-muted); font:500 11px/1.15 system-ui,sans-serif}
+.codex-atlas .atlas-links>div {gap:4px; flex:none}
+.codex-atlas .atlas-links button {display:inline-flex; align-items:center; justify-content:center; gap:4px; padding:5px 10px; min-height:30px; background:var(--atlas-field); border-color:var(--atlas-rule)}
+.codex-atlas .atlas-links .atlas-icon {width:14px; height:14px; color:var(--atlas-gold)}
+@media(max-width:590px) {
+  .codex-atlas .atlas-top nav {gap:0}
+  .codex-atlas .atlas-section {flex-direction:column; gap:2px; padding:4px 6px; font-size:10px}
+  .codex-atlas .atlas-turns {gap:3px}
+  .codex-atlas .atlas-chapter {align-items:flex-start}
+  .codex-atlas .atlas-tally,.codex-atlas .atlas-badge {font-size:10px; margin-top:2px}
+  .codex-atlas .atlas-whole {display:none}
+  .codex-atlas .atlas-drawing .atlas-halves {display:block}
+  .codex-atlas .atlas-halves figure {position:relative}
+  .codex-atlas .atlas-halves figure+figure {border-top:1px dashed var(--atlas-rule)}
+  .codex-atlas .atlas-halves figcaption {position:absolute; top:3px; left:5px; letter-spacing:.08em; font-size:8px; color:#c7b0c2}
+  .codex-atlas .atlas-halves svg {max-height:min(15dvh,115px)}
+  .codex-atlas .atlas-drawing text {font-size:14px}
+  .codex-atlas .atlas-place-list li {gap:5px; padding:7px 3px}
+  .codex-atlas .atlas-links button {padding-inline:7px}
+}
+@media(max-width:590px) and (min-height:550px) {
+  .codex-atlas .atlas-place-list {grid-template-columns:1fr; gap:2px}
+  .codex-atlas .atlas-place-list li {padding:8px 5px; gap:9px}
+  .codex-atlas .atlas-links {flex-wrap:wrap}
+  .codex-atlas .atlas-links>small {flex:1 1 100%; text-align:right}
+}
+@media(max-height:490px) {
+  .codex-atlas {gap:3px}
+  .codex-atlas .atlas-top,.codex-atlas .atlas-links {padding-block:2px}
+  .codex-atlas .atlas-folio {gap:4px}
+  .codex-atlas .atlas-top nav {gap:1px}
+  .codex-atlas .atlas-section {padding:3px 6px; font-size:11px}
+  .codex-atlas .atlas-icon {width:14px; height:14px}
+  .codex-atlas .atlas-turn,.codex-atlas .atlas-links button {min-height:24px}
+  .codex-atlas .atlas-links button {padding:2px 7px; font-size:11px}
+  .codex-atlas .atlas-chapter h3 {font-size:19px}
+  .codex-atlas .atlas-chapter small {font-size:9px}
+  .codex-atlas .atlas-drawing svg {max-height:clamp(50px,19dvh,78px)}
+  .codex-atlas .atlas-place-list {gap:2px 10px}
+  .codex-atlas .atlas-place-list li {padding:3px 5px}
+  .codex-atlas .atlas-place-list strong {font-size:16px}
+  .codex-atlas .atlas-place-list small,.codex-atlas .atlas-tally,.codex-atlas .atlas-sectors li,.codex-atlas .atlas-counter,.codex-atlas .atlas-key {font-size:11px}
+  .codex-atlas .atlas-note,.codex-atlas .atlas-unmapped {padding:6px 12px}
+  .codex-atlas .atlas-note p,.codex-atlas .atlas-unmapped p {font-size:15px; line-height:1.23}
+}
